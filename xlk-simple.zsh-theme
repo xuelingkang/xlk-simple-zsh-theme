@@ -1,7 +1,7 @@
 PROMPT='
 '
 
-PROMPT+='%{$fg_bold[black]%}%D{%Y/%m/%d %H:%M:%S.%.}%{$reset_color%}'
+PROMPT+='%{$fg_bold[black]%}%D{%Y/%m/%d %H:%M:%S}%{$reset_color%}'
 PROMPT+=' '
 
 PROMPT+='%{$fg[magenta]%}%n%{$reset_color%}'
