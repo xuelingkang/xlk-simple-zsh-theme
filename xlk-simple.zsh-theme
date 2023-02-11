@@ -12,7 +12,7 @@ function afmagic_dashes {
 }
 
 # primary prompt: dashed separator, directory and vcs info
-PROMPT='%{$fg_bold[black]%}${(l.$(afmagic_dashes)..-.)}%{$reset_color%}'
+PROMPT='%{$fg_bold[default]%}${(l.$(afmagic_dashes)..-.)}%{$reset_color%}'
 
 PROMPT+='
 '
