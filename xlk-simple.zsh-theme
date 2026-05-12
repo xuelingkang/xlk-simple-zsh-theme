@@ -1,23 +1,4 @@
-function afmagic_dashes {
-  # check either virtualenv or condaenv variables
-  local python_env="${VIRTUAL_ENV:-$CONDA_DEFAULT_ENV}"
-
-  # if there is a python virtual environment and it is displayed in
-  # the prompt, account for it when returning the number of dashes
-  if [[ -n "$python_env" && "$PS1" = \(* ]]; then
-    echo $(( COLUMNS - ${#python_env} - 3 ))
-  else
-    echo $COLUMNS
-  fi
-}
-
-# primary prompt: dashed separator, directory and vcs info
-PROMPT='%{$fg_bold[default]%}${(l.$(afmagic_dashes)..-.)}%{$reset_color%}'
-
-PROMPT+='
-'
-
-PROMPT+='%{$fg[magenta]%}%n%{$reset_color%}'
+PROMPT='%{$fg[magenta]%}%n%{$reset_color%}'
 PROMPT+='%{$fg[default]%}@%{$reset_color%}'
 PROMPT+='%{$fg[blue]%}%m%{$reset_color%}'
 PROMPT+=' '
